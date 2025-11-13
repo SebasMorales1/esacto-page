@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESACTO S.A.S</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <figure class="whatssap">
+        <img src="images/whatsapp.svg" alt="Whatssap logo">
+        <ul class="whattsap_menu">
+            <li class="whatsapp_link"><a href="#">Linea 1</a></li>
+            <li class="whatsapp_link"><a href="#">Linea 2</a></li>
+            <li class="whatsapp_link"><a href="#">Linea 3</a></li>
+        </ul>
+    </figure>
+
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav__elements container">
+                <figure class="nav__img">
+                    <span>LOGO</span>
+                    <span class="nav_text">ESACTO</span>
+                </figure>
+
+                <ul class="nav__links">
+                    <li class="nav__link"><a href="#">Escuela bachiller</a></li>
+                    <li class="nav__link"><a href="#">Escuela Técnica</a></li>
+                    <li class="nav__link"><a href="#">Legalidad</a></li>
+                    <li class="nav__link"><a href="#">Galeria</a></li>
+                </ul>
+
+                <button class="nav__menu">
+                    <img src="images/list.svg" alt="list icon">
+                </button>
+            </div>
+        </nav>
+
+        <section class="hero__main container">
+            <div>
+                <h1 class="title">ESACTO S.A.S</h1>
+
+                <p class="hero_patagraph">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis amet tempora nostrum doloremque sed! Numquam odio quisquam architecto porro amet est, aspernatur sint eos laboriosam illum, omnis, fugiat aut rem?
+                </p>
+
+                <div class="hero__cta_container">
+                    <a href="#" class="cta hero__cta">
+                        Ir a Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="hero__stadistic">
+                <h3 class="hero__stadistic_text">
+                    <span>+</span> de 16 mil estudiantes graduados hasta 2025
+                </h3>
+            </div>
+        </section>
+    </header>
+
+    <script>
+        const nav = document.getElementsByClassName("nav__links")[0]
+        const btn = document.getElementsByClassName("nav__menu")[0]
+        let state = false;
+
+        document.addEventListener("click", (e) => {
+            if (e.target !== btn.children[0] && e.target !== nav) {
+                nav.style.right = "-100%";
+                state = false;
+                btn.classList.remove("active-menu");
+            }
+        })
+
+        btn.addEventListener("click", (_) => {
+            state = !state
+
+            if (state) {
+                nav.style.right = "0";
+                btn.classList.add("active-menu");
+            }
+            else {
+                nav.style.right = "-100%";
+                btn.classList.remove("active-menu");
+            }
+        })
+    </script>
+</body>
+</html>
