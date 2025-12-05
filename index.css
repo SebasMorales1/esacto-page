@@ -328,6 +328,7 @@ button:hover {
 @media (max-width: 1020px) {
     .intro {
         flex-direction: column;
+        gap: 3em;
     }
 
     .intro__video iframe {
