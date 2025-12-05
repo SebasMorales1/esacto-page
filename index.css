@@ -2,6 +2,7 @@
     --header-font: "Roboto", sans-serif;
     --body-font: "Open Sans", sans-serif;
     --p_color: rgb(32, 21, 67);
+    --s_color: rgb(50, 34, 104);
     --title-color: rgb(19, 13, 41);
     --paragraph-color: rgb(0, 21, 29);
     --bg-s: rgb(248, 248, 248);
@@ -290,6 +291,57 @@ button:hover {
     filter: invert();
 }
 
+.school {
+    background-color: var(--p_color);
+    margin-top: 6em;
+    padding: 3.5em 0;
+    color: white;
+}
+
+.school__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.school__image img {
+    width: 100%;
+}
+
+.school__text {
+    border-left: 2px solid var(--s_color);
+    padding-left: 1em;
+}
+
+.school__text h2 {
+    font-family: var(--header-font);
+    margin-bottom: 1em;
+}
+
+.school__text p {
+    color: rgb(207, 207, 207);
+    line-height: 1.5;
+    margin-bottom: 3em;
+}
+
+.card-btn {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.school__btn {
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+}
+
+.school__btn:hover {
+    background-color: white;
+    color: var(--p_color);
+}
+
 @media (min-width: 768px) {
     .nav__links {
         gap: 10px;
@@ -322,6 +374,13 @@ button:hover {
 
     .hero__main {
         flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .school__container {
+        display: flex;
+        flex-direction: column;
     }
 }
 
