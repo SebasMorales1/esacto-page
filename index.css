@@ -332,7 +332,7 @@ button:hover {
 }
 
 .school__btn {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     font-weight: 600;
 }
@@ -340,6 +340,38 @@ button:hover {
 .school__btn:hover {
     background-color: white;
     color: var(--p_color);
+}
+
+.technique {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin-top: 5em;
+}
+
+.technique__info {
+    border-right: 2px solid rgb(206, 206, 206);
+    padding-right: 0.5em;
+}
+
+.technique__info h2 {
+    font-family: var(--header-font);
+    color: var(--title-color);
+    margin-bottom: 1em;
+}
+
+.technique__info p {
+    color: rgb(0, 21, 29);
+    line-height: 1.5;
+    margin-bottom: 3em;
+}
+
+.technique__btn {
+    display: inline;
+}
+
+.technique__image img {
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -379,6 +411,11 @@ button:hover {
 
 @media (max-width: 768px) {
     .school__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technique {
         display: flex;
         flex-direction: column;
     }
