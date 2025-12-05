@@ -16,7 +16,7 @@
 
 html {
     width: 100%;
-    max-width: 1400px;
+    min-height: calc(100vh + 400px);
     overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@ body {
 .whatssap {
     position: fixed;
     bottom: 10px;
-    left: 92%;
+    right: 20px;
     z-index: 10;
     background-color: rgb(37,211,102);
     padding: 10px;
@@ -38,6 +38,8 @@ body {
 .whatssap:hover .whattsap_menu {
     display: flex;
     align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .whatssap img {
@@ -233,6 +235,61 @@ button:hover {
     font-size: 2em;
 }
 
+/* MAIN */
+.intro {
+    margin-top: 5em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.intro__text {
+    padding: 2em 10px;
+    line-height: 1.5;
+    color: var(--paragraph-color);
+    border-right: 2px solid rgb(206, 206, 206);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.intro__video iframe {
+    border-radius: 10px;
+}
+
+.intro__links {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.intro__link {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 2px solid rgb(105, 105, 105);
+    color: rgb(105, 105, 105);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.intro__link img {
+    transition: 0.2s;
+}
+
+.intro__link:hover {
+    border-color: var(--p_color);
+    background-color: var(--p_color);
+    color: white;
+}
+
+.intro__link:hover img {
+    filter: invert();
+}
+
 @media (min-width: 768px) {
     .nav__links {
         gap: 10px;
@@ -265,5 +322,15 @@ button:hover {
 
     .hero__main {
         flex-direction: row;
+    }
+}
+
+@media (max-width: 1020px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro__video iframe {
+        width: 100%;
     }
 }
