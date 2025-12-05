@@ -374,6 +374,35 @@ button:hover {
     width: 100%;
 }
 
+.ubication {
+    margin: 8em 0;
+}
+
+.ubication__title {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    color: var(--title-color);
+    font-family: var(--header-font);
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.ubication__title img {
+    width: 0.7em;
+}
+
+.ubication__map {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.ubication__map iframe {
+    width: 900px;
+    height: 550px;
+    max-width: 100%;
+}
+
 @media (min-width: 768px) {
     .nav__links {
         gap: 10px;
